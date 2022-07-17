@@ -4,11 +4,17 @@
 // continue until second integer
 // return total sum
 
-let totalSum = null;
 
 const sumAll = function(firstInt, secondInt) {
-    for (let i = firstInt; i <= secondInt; i++) {
-        totalSum += i;
+    let totalSum = null;
+    if (firstInt < secondInt) {
+        for (let i = firstInt; i <= secondInt; i++) {
+            totalSum += i;
+        }
+    } else {
+        for (let i = secondInt; i <= firstInt; i++) {
+            totalSum += i;
+        }
     }
     return totalSum;
 };
