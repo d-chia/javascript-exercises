@@ -7,11 +7,17 @@
 
 const sumAll = function(firstInt, secondInt) {
     let totalSum = null;
+    if (firstInt < 0 || secondInt < 0) {
+        return "ERROR";
+    }
+    if (!Number.isInteger(firstInt) ||!Number.isInteger(secondInt)) {
+        return "ERROR";
+    }
     if (firstInt < secondInt) {
         for (let i = firstInt; i <= secondInt; i++) {
             totalSum += i;
         }
-    } else {
+    } else if (firstInt > secondInt) {
         for (let i = secondInt; i <= firstInt; i++) {
             totalSum += i;
         }
