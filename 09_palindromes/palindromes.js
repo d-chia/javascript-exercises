@@ -8,6 +8,7 @@ const palindromes = function (string) {
     const forwardArray = lowerCaseArray.filter(character => character >= "a" && character <= "z");
 
 //create reverse array
+//spread necessary to keep original array and not overwrite it
 
     const reverseArray = [...forwardArray].reverse();
 
