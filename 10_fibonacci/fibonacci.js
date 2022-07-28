@@ -2,6 +2,12 @@ const fibonacci = function(inputNum) {
     //create array
     const sequence = [];
     
+    //check for non-int and return error
+
+    if (!Number.isInteger(inputNum) || inputNum <= 0) {
+        return "OOPS";
+    }
+
     //fill array with fibonacci numbers until input
     for (let i = 0; i < inputNum; i++) {
         if (i <= 1)  {
